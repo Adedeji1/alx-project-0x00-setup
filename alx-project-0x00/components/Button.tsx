@@ -3,7 +3,7 @@ import React from "react";
 interface ButtonProps {
     title: string;
     size?: "small" | "medium" | "large";
-    shape?: "rounded-sm" | "rounded-md" | "rounded-full";
+    shape?: "rounded-sm" | "rounded-md" | "rounded-full" | "rounded-lg";
     className?: string;
     onClick?: () => void;
 }
@@ -27,13 +27,13 @@ const Button: React.FC<ButtonProps> = ({
     "rounded-sm": "rounded-sm",
     "rounded-md": "rounded-md",
     "rounded-full": "rounded-full",
+    "rounded-lg": "rounded-lg",
   }[shape];
 
   return (
     <button 
         onClick={onClick}
-        className={`${baseStyles} ${sizeStyles} ${shapeStyles} bg-blue-600 hover:bg-blue-700 ${className}`}
-    >
+        className={`${baseStyles} ${sizeStyles} ${shapeStyles} bg-gray-600 hover:bg-orange-700 ${className}`}>
         {title}
     </button>
   );
